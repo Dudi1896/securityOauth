@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://dpg-ckpke381hnes73df5c70-a.ohio-postgres.render.com/ums_postgresql
+    username: ENC(z7gld4FILaE+qbARYBbBKKuS8YepxppxTikc8m5DR26Mn59N0z6W2RquVqRimB2L1rFlqScV44InbH8dLjUIiQ==)
+    password: ENC(vOVCNZ3Q2CdeEfgh9CswZVmnMz+eqEy2uYbtfH4a+dQ6O5FCs+T5Ut5hGpOzQhfNtVBrDFBOnAyGmmgtsfQT8UrwBWSX4nPxrpn5T+jFC1I=)
+    driver-class: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+jwt:
+  secret-key: ENC(Hq7H19Iqi7vcwwyCpHdf6WQvOdYTgleQjWqAsGp+sFQn2Sn/pKS6ALSEZ7KuP/mNWmBzh6CGYKqZFZMqkjzvNXKDU3dmL9X4djFG2lYGWRr3alVFC3L4KMCsovUQ+q+SIkdd3pD8p6oEvS9s5tnS4IG9fQxdQ6lKLrXCjZZ7Y3DGkcHmOS9D4MZfDDUppG1pzs8jIrB4/2CgZYBa27SEnPx6mstcBSC8FtZ7MCuAwKi1NMXUtgkQzTjs8xCKECCHb5p72WjXcMy0yvpG7o1xSifvhYF9ZZNMwEYKFu8gatQgU3PkCV8+i6LXzDUsnHgA/3US5KTTPB+TnDl5rL6jCTrckOQMBZ+rGNAl1n2aFlTxIPbsvM+cqZBLVPXmS7OlsAAPI0PMKJ7215kudId4nGxh9XlZdHNaMa9F2Pldgxe5P4BYUg2R6/oqbVC/Y47XioAd+o9SGsYkfq0bIA7+rbix3uMnN9PacNB4MlG0vVA5WMlBvu2lm7MNrP3tcE7M96AXuwC6z6Wqii0A2ACMeZ1csI37WuNBbHAQGdMAj/WFPrXVFtraOsY6cH0LWByK8yQVcTABQRrsOWC/D4XtlwkZY5fpP+H2cvV3qFEOs9VMAcIZ7/WMWH4U401U92zaot3B5CRKGxEsbQZv7qoejA==)
+
+  #JasyPt Encryption/Decryption
+  #@EnableEncryptableProperties in Main Class
+  #mvn jasypt:encrypt-value -Djasypt.encryptor.password=<password> -Djasypt.plugin.value=<value>
+  #mvn jasypt:decrypt-value -Djasypt.encryptor.password=<password> -Djasypt.plugin.value=<value>
